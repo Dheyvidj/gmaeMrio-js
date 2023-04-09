@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#time-display {
+  font: bold;
+  font-size: x-large;
+}
+
+.game-board {
+  width: 50%;
+  background: linear-gradient(#87CEEB, #E0F6FF);
+  /* background-image: url("../assets/clouds.webp"); */
+  height: 500px;
+  border: 1px solid #333;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 16px solid rgb(35, 160, 35);
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  /* left: 145px; */
+  animation: pipe-animation 3s infinite linear;
+}
+
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 550ms ease-out;
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 220px;
+  }
+  50% {
+    bottom: 220px;
+  }
+  60% {
+    bottom: 220px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
